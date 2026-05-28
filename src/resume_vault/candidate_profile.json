@@ -1,0 +1,78 @@
+{
+  "candidate_name": "Ishant Sharma",
+  "contact": {
+    "email": "ishant.sharma@email.com",
+    "phone": "+91-7305211966",
+    "linkedin": "https://linkedin.com/in/ishant-sharma",
+    "github": "https://github.com/ishant-sharma"
+  },
+  "summary": "Computer Science Engineering student and full-stack developer with experience building AI-integrated web applications, blockchain systems, and backend automation tools. Strong focus on modern web architecture (Next.js, Node.js) and Data Structures & Algorithms.",
+  "skills": [
+    "Next.js", "React", "Node.js", "SQL", 
+    "Python", "Computer Vision", "Data Structures & Algorithms",
+    "Blockchain", "Smart Contracts", "AI Integrations", 
+    "Zoho SMTP", "Automation", "REST APIs"
+  ],
+  "experience": [
+    {
+      "company": "Content Repurposing Agency",
+      "title": "Founder & Full-Stack Developer",
+      "start_date": "2025-10",
+      "end_date": "Present",
+      "location": "Bangalore, India",
+      "bullets": [
+        "Engineered 'SaasRepurpose Cold Email Tool', a custom full-stack automation system using Node.js and Zoho SMTP.",
+        "Automated cold outreach campaigns by parsing CSV lead lists and dynamically injecting client data into targeted email workflows.",
+        "Managed end-to-end client strategy and content delivery for B2B SaaS founders, scaling the agency's operational efficiency."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "TrustRent",
+      "tech_stack": ["Next.js", "Blockchain", "Smart Contracts", "AI"],
+      "description": "Property management platform for landlords and tenants.",
+      "bullets": [
+        "Developed a secure property management ecosystem utilizing Blockchain and Smart Contracts to enforce tenant agreements.",
+        "Integrated AI audits to automatically verify documents and streamline the onboarding process for landlords.",
+        "Built a high-performance, server-side rendered frontend interface using Next.js."
+      ],
+      "github": "https://github.com/ishant-sharma/trust-rent",
+      "live": ""
+    },
+    {
+      "name": "VoiceBridge",
+      "tech_stack": ["AI", "React", "Node.js"],
+      "description": "AI-driven speech therapy application designed for stroke survivors.",
+      "bullets": [
+        "Engineered a full-stack application for the Microsoft Imagine Cup to assist stroke survivors with speech rehabilitation.",
+        "Integrated backend AI models to analyze user speech patterns and provide real-time therapeutic feedback.",
+        "Built responsive client-side UI components with React connected to a Node.js API layer."
+      ],
+      "github": "https://github.com/ishant-sharma/voicebridge"
+    },
+    {
+      "name": "GhostHand",
+      "tech_stack": ["Python", "Computer Vision"],
+      "description": "AI-based screen control and automation through hand gestures.",
+      "bullets": [
+        "Conceptualized and built a Python-based computer vision application for desktop automation.",
+        "Implemented gesture recognition algorithms using device cameras to map specific hand movements to system voice actions and screen controls."
+      ],
+      "github": "https://github.com/ishant-sharma/ghosthand"
+    }
+  ],
+  "education": [
+    {
+      "institution": "BMS Institute of Technology (BMSIT)",
+      "degree": "B.Tech in Computer Science and Engineering",
+      "year": "2028",
+      "gpa": "In Progress"
+    }
+  ],
+  "certifications": [],
+  "achievements": [
+    "Microsoft Imagine Cup Participant — Developed VoiceBridge AI application",
+    "Active DSA problem solver — Focused on algorithmic patterns including Two Pointers, Sliding Window, and Kadane's Algorithm"
+  ]
+}

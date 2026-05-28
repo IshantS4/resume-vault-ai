@@ -1,0 +1,115 @@
+analyze_jd_task:
+  description: >
+    You are given the following job description:
+
+    ---
+    {job_description}
+    ---
+
+    Extract and return a JSON object with exactly these keys:
+      - "required_skills": list of hard-skill strings (e.g. ["Python", "Kubernetes"])
+      - "preferred_skills": list of nice-to-have skill strings
+      - "frameworks_and_tools": list of named frameworks, libraries, or platforms
+      - "system_design_topics": list of architecture/design concepts explicitly mentioned
+      - "seniority_level": one of "Junior", "Mid", "Senior", "Staff", "Principal"
+      - "ats_keywords": list of high-frequency keywords an ATS would scan for
+      - "role_title": the exact job title as written in the JD
+
+    CRITICAL: You must return ONLY valid JSON. Absolutely NO trailing commas. No markdown fences, no prose.
+  expected_output: >
+    A valid JSON object with keys: required_skills, preferred_skills,
+    frameworks_and_tools, system_design_topics, seniority_level, ats_keywords,
+    role_title. CRITICAL: You must return ONLY valid JSON. Absolutely NO trailing commas. No markdown fences, no prose.
+  agent: jd_analyzer
+
+filter_candidate_data_task:
+  description: >
+    You have received the structured JD requirements (from the previous task).
+    Use the ProfileLoaderTool to load the candidate master profile from disk.
+
+    Your job:
+    1. Compare each project, experience entry, and skill in the profile against
+       the JD requirements.
+    2. Keep an item ONLY if it maps to at least one required_skill, preferred_skill,
+       framework, system_design_topic, or ats_keyword from the JD analysis.
+    3. Preserve all original metric data (numbers, percentages, dollar values) exactly.
+    4. Return a JSON object with keys:
+         - "candidate_name": string
+         - "contact": object with email, phone, linkedin, github
+         - "summary_hint": one sentence about the candidate's strongest relevant angle
+         - "relevant_experience": list of filtered work experience objects
+         - "relevant_projects": list of filtered project objects
+         - "relevant_skills": list of matched skill strings
+         - "education": the education section unchanged
+         - "certifications": only certifications relevant to the JD
+
+    Discard anything not relevant. CRITICAL: You must return ONLY valid JSON. Absolutely NO trailing commas. No markdown fences, no prose.
+  expected_output: >
+    A valid JSON object containing only the candidate data that is relevant to
+    the job description. Keys: candidate_name, contact, summary_hint,
+    relevant_experience, relevant_projects, relevant_skills, education,
+    certifications. CRITICAL: You must return ONLY valid JSON. Absolutely NO trailing commas. No markdown fences, no prose.
+  agent: data_strategist
+  context:
+    - analyze_jd_task
+
+write_resume_task:
+  description: >
+    Using ONLY the filtered candidate data from the previous task (do not add
+    anything that was not in that data), write a complete resume.
+
+    Output a single JSON object with this exact schema:
+    {
+      "candidate_name": "string",
+      "contact": {
+        "email": "string",
+        "phone": "string",
+        "linkedin": "string",
+        "github": "string"
+      },
+      "summary": "2-3 sentence professional summary tailored to the JD role",
+      "skills": ["skill1", "skill2"],
+      "experience": [
+        {
+          "company": "string",
+          "title": "string",
+          "start_date": "string",
+          "end_date": "string",
+          "bullets": [
+            "ACTION verb + context + quantified result (STAR format)"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "string",
+          "tech_stack": ["string"],
+          "bullets": [
+            "ACTION verb + context + quantified result (STAR format)"
+          ]
+        }
+      ],
+      "education": [
+        {
+          "institution": "string",
+          "degree": "string",
+          "year": "string"
+        }
+      ],
+      "certifications": ["string"]
+    }
+
+    Rules:
+    - Every bullet must start with a strong action verb.
+    - Every bullet must include a quantified result where one was provided;
+      otherwise use a qualitative impact phrase — never fabricate numbers.
+    - The summary must contain at least two ats_keywords from the JD analysis.
+    - CRITICAL: You must return ONLY valid JSON. Absolutely NO trailing commas. No markdown fences, no prose.
+  expected_output: >
+    A single, valid JSON object matching the ResumeOutput schema exactly.
+    CRITICAL: You must return ONLY valid JSON. Absolutely NO trailing commas. No markdown fences, no prose.
+  agent: resume_writer
+  context:
+    - analyze_jd_task
+    - filter_candidate_data_task
+  output_file: resume_output.json

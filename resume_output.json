@@ -1,0 +1,66 @@
+```json
+{
+  "candidate_name": "Arjun Mehta",
+  "contact": {
+    "email": "arjun.mehta@email.com",
+    "phone": "+91-9876543210",
+    "linkedin": "https://linkedin.com/in/arjunmehta-dev",
+    "github": "https://github.com/arjunmehta"
+  },
+  "summary": "Highly experienced Senior Data Scientist with a strong background in Machine Learning, NLP, and AI, leveraging expertise in cloud-native applications to drive business growth and innovation, with a focus on developing scalable AI products and solutions using technologies such as Python, PyTorch, and TensorFlow, with expertise in AI agents, multi-agent systems, and large language models, to deliver high-impact results in fast-paced environments, utilizing knowledge of RAG architecture and vector databases to optimize system design and performance.",
+  "skills": [
+    "Python",
+    "PyTorch",
+    "TensorFlow",
+    "NLP",
+    "LLMs",
+    "FastAPI",
+    "Docker",
+    "Kubernetes",
+    "Pinecone",
+    "Next.js",
+    "PostgreSQL"
+  ],
+  "experience": [
+    {
+      "company": "Flipkart",
+      "title": "Software Development Engineer II",
+      "start_date": "2022-07",
+      "end_date": "Present",
+      "bullets": [
+        "Developed an ML-powered demand forecasting pipeline using Python, Scikit-learn, and AWS SageMaker, resulting in a 31% improvement in forecast accuracy and a 22% reduction in overstock.",
+        "Mentored 3 junior engineers and conducted 60+ technical interviews, leading to a 15% increase in team velocity over two quarters."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "DocuMind — AI-powered Document Q&A Platform",
+      "tech_stack": [
+        "Python",
+        "FastAPI",
+        "LangChain",
+        "OpenAI GPT-4",
+        "Pinecone",
+        "Next.js",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "bullets": [
+        "Designed and implemented a RAG pipeline with LangChain + Pinecone, achieving sub-300ms query latency at p95 and embedding 50K+ enterprise documents."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "National Institute of Technology, Surathkal",
+      "degree": "B.Tech in Computer Science and Engineering",
+      "year": "2019"
+    }
+  ],
+  "certifications": [
+    "AWS Certified Solutions Architect – Associate (2023)",
+    "Certified Kubernetes Administrator (CKA) (2022)"
+  ]
+}
+```
