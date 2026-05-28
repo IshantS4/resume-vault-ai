@@ -3,27 +3,21 @@
   "candidate_name": "Ishant Sharma",
   "contact": {
     "email": "ishant.sharma@email.com",
-    "phone": "+91-7305211966",
+    "phone": "+91-1234567890",
     "linkedin": "https://linkedin.com/in/ishant-sharma",
     "github": "https://github.com/ishant-sharma"
   },
-  "summary": "Founding Engineer and Full-Stack Engineer with entrepreneurial drive, adept at building AI-driven applications and Web3 solutions. Specializing in decentralized applications, smart contracts, and backend automation to deliver innovative, high-impact products.",
+  "summary": "Motivated Junior Full Stack Engineer with strong experience developing web applications using React.js, Next.js, and Node.js. Demonstrated ability to build API endpoints and Automated outreach tools, complemented by a solid understanding of Data Structures and Algorithms.",
   "skills": [
-    "Data Structures & Algorithms",
     "Next.js",
     "React",
     "Node.js",
-    "Python",
     "SQL",
+    "Data Structures & Algorithms",
     "Blockchain",
     "Smart Contracts",
-    "AI Integrations",
-    "Computer Vision",
     "Automation",
-    "REST APIs",
-    "Zoho SMTP",
-    "Full-Stack Development",
-    "Entrepreneurial Mindset"
+    "REST APIs"
   ],
   "experience": [
     {
@@ -32,9 +26,9 @@
       "start_date": "2025-10",
       "end_date": "Present",
       "bullets": [
-        "Developed a custom full-stack backend automation system, 'SaasRepurpose Cold Email Tool', utilizing Node.js and Zoho SMTP to streamline outreach.",
-        "Automated B2B outreach campaigns by designing data parsing mechanisms for CSV lead lists and dynamically injecting client data into targeted email workflows.",
-        "Managed end-to-end client strategy and content delivery, improving the agency's operational efficiency and client satisfaction."
+        "Engineered a custom full-stack Automated outreach tool ('SaasRepurpose Cold Email Tool') using Node.js and Zoho SMTP, enabling scalable cold email campaigns.",
+        "Automated cold outreach campaigns by developing a system to parse CSV lead lists and dynamically inject client data, enhancing personalization and targeting.",
+        "Managed end-to-end client strategy and content delivery for B2B SaaS founders, significantly scaling the agency's operational efficiency."
       ]
     }
   ],
@@ -48,11 +42,12 @@
         "AI"
       ],
       "bullets": [
-        "Engineered a secure decentralized property management system leveraging Blockchain architecture and Smart Contracts to automate tenant agreement enforcement.",
-        "Integrated AI-driven applications for automated document verification, streamlining landlord onboarding processes.",
-        "Constructed a high-performance, server-side rendered frontend interface using Next.js for an improved user experience."
+        "Developed a secure property management ecosystem leveraging Blockchain concepts and Smart Contracts to automate and enforce tenant agreements, ensuring transparency.",
+        "Integrated AI audits to automatically verify documents, streamlining the onboarding process for landlords and reducing manual review time.",
+        "Built a high-performance, Server-Side Rendered (SSR) frontend interface using Next.js, optimizing initial load times and user experience."
       ]
-    ,
+    },
+    {
       "name": "VoiceBridge",
       "tech_stack": [
         "AI",
@@ -60,20 +55,9 @@
         "Node.js"
       ],
       "bullets": [
-        "Developed a full-stack application for speech rehabilitation, assisting stroke survivors with therapeutic exercises for the Microsoft Imagine Cup.",
-        "Integrated backend AI models to analyze user speech-based AI patterns and deliver real-time therapeutic feedback, enhancing patient progress.",
-        "Built responsive client-side UI components with React, connected to a Node.js REST APIs layer, ensuring a seamless user interface."
-      ]
-    },
-    {
-      "name": "GhostHand",
-      "tech_stack": [
-        "Python",
-        "Computer Vision"
-      ],
-      "bullets": [
-        "Conceptualized and built a Python-based Computer Vision application for desktop automation.",
-        "Implemented advanced gesture recognition algorithms using device cameras, mapping specific hand movements to system voice actions and screen controls."
+        "Engineered a full-stack application for the Microsoft Imagine Cup, providing innovative speech rehabilitation assistance for stroke survivors.",
+        "Integrated backend AI models to analyze user speech patterns and deliver real-time therapeutic feedback, enhancing rehabilitation effectiveness.",
+        "Built responsive client-side UI components using React and connected them to a Node.js API layer, ensuring a seamless and interactive user experience."
       ]
     }
   ],

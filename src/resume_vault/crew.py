@@ -1,8 +1,15 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from crewai.agents.agent_builder.base_agent import BaseAgent
+import time
 
 from resume_vault.tools.profile_loader_tool import ProfileLoaderTool
+
+
+def gemini_rate_limit_pause_callback(_task_output):
+    """Pause briefly to avoid Gemini burst-rate limits between tasks."""
+    print("Pausing for 12 seconds to respect Gemini rate limits...")
+    time.sleep(12)
 
 
 @CrewBase
@@ -49,12 +56,14 @@ class ResumeVault():
     def analyze_jd_task(self) -> Task:
         return Task(
             config=self.tasks_config["analyze_jd_task"],  # type: ignore[index]
+            callback=gemini_rate_limit_pause_callback,
         )
 
     @task
     def filter_candidate_data_task(self) -> Task:
         return Task(
             config=self.tasks_config["filter_candidate_data_task"],  # type: ignore[index]
+            callback=gemini_rate_limit_pause_callback,
         )
 
     @task
